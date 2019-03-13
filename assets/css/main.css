@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.info {
+    width: auto;
+    height: 100px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    font-family: 'Roboto', sans-serif;
+    padding: 12px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: whitesmoke;
+    overflow: hidden;
+}
+
+.info-close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+}
+
+
+.wrap {
+    width: 100vw;
+    height: 100vh;
+    background: url('https://wallpapercave.com/wp/wp2595124.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+main {
+    margin: 0 auto;
+    min-height: 500px;
+    width: 400px;
+    max-height: 400px;
+}
+
+.character-wrap {
+    display: flex;
+    flex-flow: column;
+}
+
+.character {
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: 'Roboto', sans-serif;
+}
+
+.character > img {
+    margin: 0 auto;
+}
+
+.character--name {
+    font-size: 2rem;
+}
+
+.character--p {
+    font-size: 1.2rem;
+}
+
+.character--p > span {
+    font-weight: bold;
+}
+
+.character > img {
+    animation: showoff 1s ease-in-out infinite alternate;
+}
+
+.btn-group {
+    display: flex;
+    flex-flow: row nowrap;
+    flex-basis: 50%;
+    height: 100px;
+}
+
+.btn-group > button {
+    flex: 1;
+    height: max-content;
+    align-self: flex-end;
+    padding: 12px;
+    border-radius: 10px;
+    margin: 10px;
+    outline: 0;
+    background: white;
+    border: 0;
+    transition: transform 100ms ease-in-out;
+    font-size: 1.2rem;
+}
+
+.btn-group > button:hover {
+    opacity: 0.8;
+}
+
+.btn-group > button:active {
+    transform: translateY(10px);
+}
+
+.hidden {
+    display: none;
+}
+
+
+@keyframes showoff {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
