@@ -24,6 +24,7 @@ html, body {
     border-radius: 10px;
     background: whitesmoke;
     overflow: hidden;
+    z-index: 100;
 }
 
 .info-close {
