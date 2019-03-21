@@ -37,27 +37,24 @@ html, body {
 
 .wrap {
     width: 100vw;
-    height: 100vh;
+    min-height: 100%;
     background: url('https://wallpapercave.com/wp/wp2595124.jpg');
     background-position: center;
     background-size: cover;
 }
 
 main {
-    margin: 0 auto;
-    min-height: 500px;
-    width: 400px;
-    max-height: 400px;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
 }
 
 .character-wrap {
-    display: flex;
-    flex-flow: column;
+    flex: 1;
 }
 
 .character {
-    display: flex;
-    flex-flow: column nowrap;
     text-align: center;
     text-transform: capitalize;
     font-family: 'Roboto', sans-serif;
@@ -84,10 +81,11 @@ main {
 }
 
 .btn-group {
+    flex: 1;
     display: flex;
     flex-flow: row nowrap;
-    flex-basis: 50%;
     height: 100px;
+    width: 50%;
 }
 
 .btn-group > button {
@@ -100,7 +98,7 @@ main {
     outline: 0;
     background: white;
     border: 0;
-    transition: transform 100ms ease-in-out;
+    transition: transform 50ms ease-in-out;
     font-size: 1.2rem;
 }
 
@@ -128,5 +126,16 @@ main {
 
     100% {
         transform: scale(1);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .info {
+        display: none;
+    }
+
+    .btn-group {
+        width: 100%;
     }
 }
